@@ -6,11 +6,11 @@ public class Bird {
     private String color;
     private int quantity;
     private int price;
-    private static double totalKind =0;
+    private static int totalKind =0;
 
     public Bird(){
 
-    };
+    }
 
     public Bird(String name, String type, String color, int quantity){
         setName(name);
@@ -97,9 +97,8 @@ public class Bird {
         setQuantity(quantity);
     }
 
-    public void setTotalKind(double totalKind){
+    public void setTotalKind(int totalKind){
         Bird.totalKind -=this.totalKind;
         Bird.totalKind += Bird.totalKind;
-        this.totalKind = Bird.totalKind;
     }
 }
