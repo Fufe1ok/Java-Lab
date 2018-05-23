@@ -8,9 +8,6 @@ public class Action extends Paper {
 
     public Action(String name, TrendsENUM trendsENUM, int price, RiskEnum riskEnum){
         super(name, trendsENUM, price, riskEnum);
-        this.quantity=quantity;
-        this.type=type;
-
     }
 
     public int getQuantity() {

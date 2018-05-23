@@ -45,9 +45,10 @@
           <version>5.0.0</version>
       </dependency>
       <dependency>
-          <groupId>org.junit.jupiter</groupId>
-          <artifactId>junit-jupiter-api</artifactId>
-          <version>5.0.0</version>
+          <groupId>org.daverog</groupId>
+          <artifactId>json-ld-tree</artifactId>
+          <version>1.0.7</version>
+          <scope>test</scope>
       </dependency>
 
   </dependencies>

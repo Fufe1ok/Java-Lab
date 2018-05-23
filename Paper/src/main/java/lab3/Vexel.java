@@ -7,8 +7,6 @@ public class Vexel extends Paper{
 
     public Vexel(String name, TrendsENUM trendsENUM, int price, RiskEnum riskEnum){
         super(name, trendsENUM, price, riskEnum);
-        this.quantity=quantity;
-        this.type=type;
 
     }
 
