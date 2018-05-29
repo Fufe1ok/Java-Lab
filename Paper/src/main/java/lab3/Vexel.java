@@ -1,41 +1,24 @@
 package lab3;
 
 public class Vexel extends Paper{
+    private final int cash;
     private int quantity;
     private String type;
 
 
-    public Vexel(String name, TrendsENUM trendsENUM, int price, RiskEnum riskEnum){
+    public Vexel(String name, TrendsENUM trendsENUM, int price, RiskEnum riskEnum, int cash){
         super(name, trendsENUM, price, riskEnum);
+        this.cash= cash;
 
     }
 
-    public int getQuantity() {
-        return quantity;
+    public String getHeaders(){
+        return super.getHeaders() + " , " + "cash";
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public String toCSV(){
+        return super.toCSV() + " , " + this.cash;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-
-
-
-    @Override
-    String getRisk() {
-        return "Paper: " + getName() + "\n"
-                + "Risk " + riskEnum + "\n"
-                + "Trend: " + trendsENUM + "\n"
-                + "Quantity: " + getQuantity() + "$ per one" +"\n"
-                + "Type: " + getType() + "\n"
-                + "Price: " + getPrice() + "UAN" + "\n";
-    }
 }
+

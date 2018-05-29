@@ -12,32 +12,11 @@ public class Obligation extends Paper {
 
     }
 
-    public int getQuantity() {
-        return quantity;
+    public String getHeaders(){
+        return super.getHeaders() + " , " + "quantity";
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-
-
-
-    @Override
-    String getRisk() {
-        return "Paper: " + getName() + "\n"
-                + "Risk " + riskEnum + "\n"
-                + "Trend: " + trendsENUM + "\n"
-                + "Quantity: " + getQuantity() + "$ per one" +"\n"
-                + "Type: " + getType() + "\n"
-                + "Price: " + getPrice() + "UAN" + "\n";
+    public String toCSV() {
+        return super.toCSV() + " , " + this.quantity;
     }
 }

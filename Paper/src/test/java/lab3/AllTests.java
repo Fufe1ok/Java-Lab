@@ -9,11 +9,11 @@ public class AllTests {
 	
 	Action action = new Action("Google", TrendsENUM.GROWING, 800, RiskEnum.LOW);
     Paper yandex = new Obligation("yandex", TrendsENUM.FALLING, 450, RiskEnum.MEDIUM);
-    Paper amazon = new Vexel("amazon", TrendsENUM.GROWING, 600, RiskEnum.MEDIUM);
+    Paper amazon = new Vexel("amazon", TrendsENUM.GROWING, 600, RiskEnum.MEDIUM, 450);
     Paper Bing= new Action("Bing", TrendsENUM.FALLING, 320, RiskEnum.LOW);
     Paper softServe = new Action("SoftServe", TrendsENUM.GROWING, 120, RiskEnum.MEDIUM);
     Obligation obligation= new Obligation("Elex", TrendsENUM.FALLING, 120, RiskEnum.MEDIUM);
-    Vexel vexel= new Vexel("NIX", TrendsENUM.GROWING, 320, RiskEnum.LOW);
+    Vexel vexel= new Vexel("NIX", TrendsENUM.GROWING, 320, RiskEnum.LOW, 450);
 	
 	@Test
 	public void isNullAction() {
@@ -33,8 +33,6 @@ public class AllTests {
 		assertEquals("SomeCompany", action.getName());
 		action.setPrice(111);
 		assertEquals(111, action.getPrice());
-		action.setQuantity(222);
-		assertEquals(222, action.getQuantity());
 		action.setRiskEnum(RiskEnum.SUPERHIGH);
 		assertEquals(RiskEnum.SUPERHIGH, action.getRiskEnum());
 		action.setTrendsENUM(TrendsENUM.FALLING);
@@ -42,14 +40,10 @@ public class AllTests {
 
 		Paper paper = new Paper(action.getName(), action.getTrendsENUM(), action.getPrice(), action.getRiskEnum());
 
-		action.setType("SomeType");
-		assertEquals("SomeType", action.getType());
 
 		assertEquals("Paper: " + action.getName() + "\n"
                 + "Risk " + action.riskEnum + "\n"
                 + "Trend: " + action.trendsENUM + "\n"
-                + "Quantity: " + action.getQuantity() + "$ per one" +"\n"
-                + "Type: " + action.getType() + "\n"
                 + "Price: " + action.getPrice() + "UAN" + "\n", action.getRisk());
 
 
@@ -68,7 +62,6 @@ public class AllTests {
 		assertNotNull(vexel);
 		assertNotNull(vexel.getName());
 		assertNotNull(vexel.getPrice());
-		assertNotNull(vexel.getQuantity());
 		assertNotNull(vexel.getRiskEnum());
 		assertNotNull(vexel.getTrendsENUM());
 	}
@@ -81,7 +74,6 @@ public class AllTests {
 		assertNotNull(obligation);
 		assertNotNull(obligation.getName());
 		assertNotNull(obligation.getPrice());
-		assertNotNull(obligation.getQuantity());
 		assertNotNull(obligation.getRiskEnum());
 		assertNotNull(obligation.getTrendsENUM());
 

@@ -1,13 +1,20 @@
 package lab3;
 
 public class Paper {
-    public char[] toString;
     private String name;
     TrendsENUM trendsENUM;
     RiskEnum riskEnum;
     private int price;
 
-    public Paper(){};
+    public Paper(){}
+
+    public String getHeaders(){
+        return "name, trends, risk, price";
+    }
+
+    public String toCSV(){
+        return this.name + " , " + this.trendsENUM + " , " + this.riskEnum + " , " + this.price;
+    }
 
     public Paper(String name, TrendsENUM trendsENUM, int price, RiskEnum riskEnum) {
         this.setName(name);
@@ -56,22 +63,5 @@ public class Paper {
     String getRisk(){
         return riskEnum.toString();
     }
-
-
-
-    @Override
-    public String toString() {
-        return "Paper:{" +
-
-                "name: '" + name + '\'' +
-                ", Trends: " + trendsENUM +
-                ", Risk: " + riskEnum +
-                ", price=" + price +
-                '}';
-
-    }
-
-
-
 
 }
