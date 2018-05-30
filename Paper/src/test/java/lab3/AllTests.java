@@ -9,11 +9,11 @@ public class AllTests {
 	
 	Action action = new Action("Google", TrendsENUM.GROWING, 800, RiskEnum.LOW);
     Paper yandex = new Obligation("yandex", TrendsENUM.FALLING, 450, RiskEnum.MEDIUM);
-    Paper amazon = new Vexel("amazon", TrendsENUM.GROWING, 600, RiskEnum.MEDIUM, 450);
+    Paper amazon = new Vexel("amazon", TrendsENUM.GROWING, 600, RiskEnum.MEDIUM);
     Paper Bing= new Action("Bing", TrendsENUM.FALLING, 320, RiskEnum.LOW);
     Paper softServe = new Action("SoftServe", TrendsENUM.GROWING, 120, RiskEnum.MEDIUM);
     Obligation obligation= new Obligation("Elex", TrendsENUM.FALLING, 120, RiskEnum.MEDIUM);
-    Vexel vexel= new Vexel("NIX", TrendsENUM.GROWING, 320, RiskEnum.LOW, 450);
+    Vexel vexel= new Vexel("NIX", TrendsENUM.GROWING, 320, RiskEnum.LOW);
 	
 	@Test
 	public void isNullAction() {

@@ -1,14 +1,12 @@
 package lab3;
 
 public class Vexel extends Paper{
-    private final int cash;
     private int quantity;
     private String type;
 
 
-    public Vexel(String name, TrendsENUM trendsENUM, int price, RiskEnum riskEnum, int cash){
+    public Vexel(String name, TrendsENUM trendsENUM, int price, RiskEnum riskEnum){
         super(name, trendsENUM, price, riskEnum);
-        this.cash= cash;
 
     }
 
@@ -17,7 +15,7 @@ public class Vexel extends Paper{
     }
 
     public String toCSV(){
-        return super.toCSV() + " , " + this.cash;
+        return super.toCSV() + " , " + this.riskEnum;
     }
 
 }
