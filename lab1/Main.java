@@ -4,9 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        Bird SomeBird=new Bird();
-        Bird Parrot= new Bird("Parrot", "Domestic bird", "Yellow", 12 );
-        Bird Chicken= new Bird("Chicken" ,"Domestic bird", "White", 10, 50   );
+        Bird someBird=new Bird();
+        Bird parrot= new Bird("Parrot", "Domestic bird", "Yellow", 12 );
+        Bird chicken= new Bird("Chicken" ,"Domestic bird", "White", 10, 50   );
 
 
         System.out.println(SomeBird.toString());
